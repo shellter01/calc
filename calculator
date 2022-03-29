@@ -1,0 +1,62 @@
+#!/bin/bash
+#An shell script program using bc calculator!
+clear
+echo "------------------------------"
+echo "Hello $USER, choose an option:"
+echo "1 - Add +"
+echo "2 - Mult *"
+echo "3 - Div /"
+echo "4 - Sub -"
+echo "5 - Sqrt √"
+echo "-------------------------------"
+read cmd
+#Add
+if [ $cmd = 1 ];
+then
+	echo "**ADD**"
+        echo -n "Insert a number: "
+        read n1
+        echo -n "Another:"
+        read n2
+        var=$[ $n1 + $n2]
+        echo "The result is $var"
+#Mult
+elif [ $cmd = 2 ];
+then
+	echo "**MULT**"
+	echo -n "Insert a number : "
+	read n3
+	echo -n "Another :"
+	read n4
+	var1=`echo "$n3 * $n4" | bc`
+	echo "The result is $var1"
+
+#Div
+elif [ $cmd = 3 ];
+then
+	echo "**DIV**"
+	echo -n "Insert a number: "
+	read n5
+	echo -n "Another: "
+	read n6
+	var2=`echo "scale=1; $n5 / $n6" | bc`
+	echo "The result is $var2"
+
+#Sub
+elif [ $cmd = 4 ];
+then
+	echo -n "Insert a number : "
+	read n7
+	echo -n "Another :"
+	read n8
+	var3=$[ $n7 - $n8 ]
+	echo "The result is $var3"
+#Sqrt
+elif [ $cmd = 5 ];
+then
+	echo "**SQRT√**"
+	echo -n "Insert a number : "
+	read n9
+	var4=`echo "scale=1; sqrt($n9)" | bc`
+	echo "The result is $var4"
+	fi
