@@ -1,6 +1,7 @@
 #!/bin/bash
 #An shell script program using bc calculator!
 clear
+figlet Calculator + - /
 echo "------------------------------"
 echo "Hello $USER, choose an option:"
 echo "1 - Add +"
