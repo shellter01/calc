@@ -29,7 +29,7 @@ then
 	read n3
 	echo -n "Another :"
 	read n4
-	var1=`echo "$n3 * $n4" | bc`
+	var1=$(echo "$n3 * $n4" | bc)
 	echo "The result is $var1"
 
 #Div
@@ -40,7 +40,7 @@ then
 	read n5
 	echo -n "Another: "
 	read n6
-	var2=`echo "scale=1; $n5 / $n6" | bc`
+	var2=$(echo "scale=1; $n5 / $n6" | bc)
 	echo "The result is $var2"
 
 #Sub
@@ -58,6 +58,6 @@ then
 	echo "**SQRT√**"
 	echo -n "Insert a number : "
 	read n9
-	var4=`echo "scale=1; sqrt($n9)" | bc`
+	var4=$(echo "scale=1; sqrt($n9)" | bc)
 	echo "The result is $var4"
 	fi
